@@ -6,7 +6,7 @@ window.onload = function(){
         this.opricest = document.querySelector('.pricest');
         this.totalnum = 0;
     };
-    //小计:  商品数量 * 商品单价
+    //小计: 数量 * 单价
     cart.prototype.getsubtotal = function(goodsnum,unitprice){
         return parseInt(goodsnum) * parseFloat(unitprice) ;
     };
@@ -33,7 +33,7 @@ window.onload = function(){
         };
         return temp;
     };
-    // 点击“+”号按钮触发的购物车商品数量，花费，最大价格的变动
+    // 点击“+”号按钮触发的购物车的变动
     cart.prototype.plus = function(obtn){
         var onum = obtn.parentNode.querySelector('.num');
         var n = parseInt(onum.innerHTML);
@@ -46,7 +46,7 @@ window.onload = function(){
         this.opricetal.innerHTML = this.gettotal();
         this.opricest.innerHTML = this.compareMaxunit();
     };
-    // 点击“-”号按钮触发的购物车商品数量，花费，最大价格的变动
+    // 点击“-”号按钮触发
     cart.prototype.minus = function(obtn){
         var onum = obtn.parentNode.querySelector('.num');
         if(parseInt(onum.innerHTML)>0){
@@ -80,7 +80,6 @@ window.onload = function(){
         this.opricest.innerHTML = this.compareMaxunit();
         this.xuhaosort();
     }
-    // 购物车序号重新排序
     cart.prototype.xuhaosort = function(){
         var axuhao = document.querySelectorAll('.xuhao');
         for(var i=0,len=axuhao.length;i<len;i++){
