@@ -3,7 +3,6 @@ package ai;
 import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
-
 public class Engine {
     private static final int MAX_RAND_SEARCH_COUNT = 5040;
     final static String[] OPS = "+ - * /".split(" ");
