@@ -31,7 +31,6 @@ public class Engine {
             }
             for (String op : ops) {
                 exp.add(op);
-
             }
 
             int tot = 0;
